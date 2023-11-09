@@ -2,6 +2,13 @@
 
 AQIVisualizer is a command-line Python application that fetches the Air Quality Index (AQI) data for a specified city and generates a landscape image that artistically represents the current air quality conditions. The tool uses environmental data APIs and OpenAI's image generation capabilities to overlay the AQI value on the image in a hyper-realistic style.
 
+For example: 
+
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/70967d1d-b6d9-44a7-b9ce-6b16696c0b48)
+
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/5a0db253-bbed-4185-b472-2a7f4a894101)
+
+
 ## Features
 
 - Fetch real-time AQI data for any specified city.
