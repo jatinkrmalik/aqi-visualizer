@@ -46,7 +46,7 @@ def create_image_with_openai(api_key, prompt):
         quality="standard",
         n=1,
     )
-    if response.status_code == 200:
+    if response.data:
         logging.info("Image generated successfully")
         return response.data[0].url
     else:
@@ -132,5 +132,5 @@ def main(user_path):
 
 # Run the script
 if __name__ == "__main__":
-    user_provided_path = input("Please enter the path to save the image: ")
+    user_provided_path = input("Please enter the path to save the image: ") or os.getcwd()
     main(user_provided_path)
