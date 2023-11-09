@@ -4,9 +4,11 @@ AQIVisualizer is a command-line Python application that fetches the Air Quality 
 
 For example: 
 
-![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/70967d1d-b6d9-44a7-b9ce-6b16696c0b48)
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/44331e70-0d0e-4ca3-a320-0e3f3c98a76a)
 
 ![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/5a0db253-bbed-4185-b472-2a7f4a894101)
+
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/ac684b55-8585-4741-9f76-fbbb9ec478e2)
 
 
 ## Features
