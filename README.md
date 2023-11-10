@@ -8,8 +8,6 @@ For example:
 
 ![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/5a0db253-bbed-4185-b472-2a7f4a894101)
 
-![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/ac684b55-8585-4741-9f76-fbbb9ec478e2)
-
 
 ## Features
 
@@ -26,6 +24,16 @@ Before you begin, ensure you have met the following requirements:
 - Python 3.6 or higher installed on your machine.
 - An active internet connection to fetch data from APIs and generate images.
 - API keys for OpenAI and AQICN services.
+
+## Project Structure
+
+The project is organized into the following modules:
+
+- `aqi_api.py`: Handles the fetching of AQI data from the environmental data API.
+- `image_generator.py`: Manages the generation of images and the addition of text overlays.
+- `cli.py`: Contains the command-line interface logic for accepting user inputs.
+- `utils.py`: Provides utility functions such as logging setup.
+- `main.py`: Serves as the entry point to the application, orchestrating the flow between modules
 
 ## Installation
 
@@ -49,16 +57,16 @@ To install AQIVisualizer, follow these steps:
 To use AQIVisualizer, you can run the script with optional command-line arguments. Here's how you can execute the script:
 
 ```sh
-python aqivisualizer.py --city "City Name" --text "Custom Text Overlay"
+python main.py --city "City Name" --text "Custom Text Overlay" --output "path/to/save/image"
 ```
 
 ### Command-line Arguments
 
 - `--city`: Specify the city name for which you want to fetch the AQI data and generate the image. If not provided, "here" will be used as the default value.
 - `--text`: Custom text to overlay on the image. If not provided, the default text will be in the format "City Name // AQI".
+- `--output`: Specify the path where you want to save the generated image. If not provided, the image will be saved in the current directory.
 - `--help`: Display help information and exit.
 
-When you run the script, it will prompt you to enter the path where you want to save the generated image. Enter the desired file path, and the script will handle the rest.
 
 ## Contributing
 
