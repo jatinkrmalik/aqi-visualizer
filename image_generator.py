@@ -6,14 +6,20 @@ from collections import Counter
 from openai import OpenAI
 import requests
 
+
 def generate_image_prompt(city_name, aqi):
     logging.info(f"Generating image prompt for city: {city_name}, with AQI: {aqi}")
-    return (
+    prompt = (
         "Create a realistic landscape image of a famous landmark or popular destination from {}. "
-        "The image should be altered to reflect an Air Quality Index based on AQI value: {}. "
         "The artistic style should be a hyper-realistic render, closely resembling a high-resolution photograph. "
-        "The aspect ratio of the image should be 16:9 to provide a wide landscape view"
-    ).format(city_name, aqi)
+    ).format(city_name)
+
+    if aqi:
+        prompt += (
+            "The image should be altered to reflect an Air Quality based on AQI value: {}. "
+        ).format(aqi)
+    return prompt
+
 
 def create_image_with_openai(api_key, prompt):
     logging.info(f"Requesting image generation with prompt: {prompt}")
@@ -32,6 +38,7 @@ def create_image_with_openai(api_key, prompt):
         logging.error(f"Image generation failed, status code: {response.status_code}")
         response.raise_for_status()
 
+
 def download_image(image_url):
     logging.info(f"Downloading image from URL: {image_url}")
     response = requests.get(image_url)
@@ -41,6 +48,7 @@ def download_image(image_url):
     else:
         logging.error(f"Failed to download image, status code: {response.status_code}")
         response.raise_for_status()
+
 
 def add_text_to_image(image, city_name, aqi, font_path, font_size, custom_text=None):
     logging.info("Adding text overlay to image")
@@ -53,6 +61,7 @@ def add_text_to_image(image, city_name, aqi, font_path, font_size, custom_text=N
     draw.text(position, text, font=font, fill=most_common_color)
     logging.info("Text overlay added successfully")
     return image
+
 
 def save_and_copy_image(image, city_name, aqi, user_path):
     logging.info("Saving and copying image to the specified path")
