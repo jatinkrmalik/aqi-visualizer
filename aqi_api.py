@@ -2,7 +2,8 @@ import logging
 import requests
 from utils import filter_english_characters
 
-
+# Fetch AQI data from the AQICN API
+# https://aqicn.org/json-api/doc/#api-City_Feed-GetCityFeed
 def get_aqi_data(city_name, token):
     logging.info(f"Fetching AQI data for {city_name}")
     aqi_url = f"https://api.waqi.info/feed/{city_name}/"

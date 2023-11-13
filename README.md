@@ -52,6 +52,8 @@ To install AQIVisualizer, follow these steps:
    ```
    Replace `<your_openai_token>` and `<your_aqicn_token>` with your actual OpenAI and AQICN API keys, respectively.
 
+   > Get your AQI Token from [here](https://aqicn.org/api).
+
 ## Usage
 
 To use AQIVisualizer, you can run the script with optional command-line arguments. Here's how you can execute the script:
@@ -63,21 +65,26 @@ python main.py --city "City Name" --text "Custom Text Overlay" --output "path/to
 Example: 
 
 ```shell
-❯ python main.py --city "Pune" --output "/Users/jmalik/Downloads"
-2023-11-10 09:41:41,677 - INFO - Fetching AQI data for Pune
-2023-11-10 09:41:42,502 - INFO - Successfully retrieved AQI data: 232
-2023-11-10 09:41:42,504 - INFO - Generating image prompt for city: Pune, with AQI: 232
-2023-11-10 09:41:42,504 - INFO - Requesting image generation with prompt: Create a realistic landscape image of a famous landmark or popular destination from Pune. The image should be altered to reflect an Air Quality Index based on AQI value: 232. The artistic style should be a hyper-realistic render, closely resembling a high-resolution photograph. The aspect ratio of the image should be 16:9 to provide a wide landscape view
-2023-11-10 09:41:58,217 - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
-2023-11-10 09:41:58,220 - INFO - Image generated successfully
-2023-11-10 09:41:58,220 - INFO - Downloading image from URL: https://oaidal......<image-url>.....
-2023-11-10 09:42:04,679 - INFO - Image downloaded successfully
-2023-11-10 09:42:04,688 - INFO - Adding text overlay to image
-2023-11-10 09:42:05,035 - INFO - Text overlay added successfully
-2023-11-10 09:42:05,036 - INFO - Saving and copying image to the specified path
-2023-11-10 09:42:05,477 - INFO - Image saved to temporary path: /tmp/Pune_232.png
-2023-11-10 09:42:05,481 - INFO - Image copied to user-specified path: /Users/jmalik/Downloads/Pune_232.png
+$ python main.py --output="/Users/jmalik/Downloads" --text="konnichiwa" --city=Tokyo --font-size=100
+
+2023-11-13 23:33:29,641 - INFO - Fetching AQI data for Tokyo
+2023-11-13 23:33:34,916 - INFO - Successfully retrieved AQI data: 21 for city: Meguro (目黒)
+2023-11-13 23:33:34,919 - INFO - Retrieved AQI data: 21
+2023-11-13 23:33:34,919 - INFO - Generating image prompt for city: Tokyo, with AQI: 21
+2023-11-13 23:33:34,919 - INFO - Requesting image generation with prompt: Create a realistic landscape image of a famous landmark or popular destination from Tokyo. The artistic style should be a hyper-realistic render, closely resembling a high-resolution photograph. The image should be altered to reflect an Air Quality based on AQI value: 21. 
+2023-11-13 23:33:50,641 - INFO - HTTP Request: POST https://api.openai.com/v1/images/generations "HTTP/1.1 200 OK"
+2023-11-13 23:33:50,645 - INFO - Image generated successfully
+2023-11-13 23:33:50,645 - INFO - Downloading image from OpenAI
+2023-11-13 23:33:57,201 - INFO - Image downloaded successfully
+2023-11-13 23:33:57,216 - INFO - Adding text overlay to image
+2023-11-13 23:33:57,511 - INFO - Text overlay added successfully
+2023-11-13 23:33:57,511 - INFO - Saving and copying image to the specified path
+2023-11-13 23:33:58,017 - INFO - Image saved to temporary path: /tmp/Tokyo_21.png
+2023-11-13 23:33:58,020 - INFO - Image copied to user-specified path: /Users/jmalik/Downloads/Tokyo_21.png
 ```
+
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/dd9e4cca-be5e-4816-94ff-5e3486344404)
+
 
 ### Command-line Arguments
 
