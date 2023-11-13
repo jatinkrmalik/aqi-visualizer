@@ -47,10 +47,10 @@ To install AQIVisualizer, follow these steps:
    ```
 4. Set up your API keys as environment variables:
    ```sh
-   export OPEN_AI_TOKEN=your_openai_token
-   export AQICN_TOKEN=your_aqicn_token
+   export OPEN_AI_TOKEN=<your_openai_token>
+   export AQICN_TOKEN=<your_aqicn_token>
    ```
-   Replace `your_openai_token` and `your_aqicn_token` with your actual OpenAI and AQICN API keys, respectively.
+   Replace `<your_openai_token>` and `<your_aqicn_token>` with your actual OpenAI and AQICN API keys, respectively.
 
 ## Usage
 
@@ -82,6 +82,8 @@ Example:
 ### Command-line Arguments
 
 - `--city`: Specify the city name for which you want to fetch the AQI data and generate the image. If not provided, "here" will be used as the default value.
+- `--aqi`: Whether to generate and overlay AQI. Use --aqi=false to disable. (Default: true)
+- `--text`: Custom text to overlay on the image. If not provided, the default text will be in the format "City Name // AQI". (Note: --aqi must NOT be false for this to work.)
 - `--text`: Custom text to overlay on the image. If not provided, the default text will be in the format "City Name // AQI".
 - `--output`: Specify the path where you want to save the generated image. If not provided, the image will be saved in the current directory.
 - `--help`: Display help information and exit.
