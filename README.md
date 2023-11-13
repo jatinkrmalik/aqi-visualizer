@@ -83,6 +83,9 @@ $ python main.py --output="/Users/jmalik/Downloads" --text="konnichiwa" --city=T
 2023-11-13 23:33:58,020 - INFO - Image copied to user-specified path: /Users/jmalik/Downloads/Tokyo_21.png
 ```
 
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/dd9e4cca-be5e-4816-94ff-5e3486344404)
+
+
 ### Command-line Arguments
 
 - `--city`: Specify the city name for which you want to fetch the AQI data and generate the image. If not provided, "here" will be used as the default value.
