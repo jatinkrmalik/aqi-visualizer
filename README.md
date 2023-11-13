@@ -27,7 +27,7 @@ Before you begin, ensure you have met the following requirements:
 
 ## Project Structure
 
-The project is organized into the following modules:
+The project is organized into the following modules under `./src`:
 
 - `aqi_api.py`: Handles the fetching of AQI data from the environmental data API.
 - `image_generator.py`: Manages the generation of images and the addition of text overlays.
@@ -59,13 +59,13 @@ To install AQIVisualizer, follow these steps:
 To use AQIVisualizer, you can run the script with optional command-line arguments. Here's how you can execute the script:
 
 ```sh
-python main.py --city "City Name" --text "Custom Text Overlay" --output "path/to/save/image"
+python src/main.py --city "City Name" --text "Custom Text Overlay" --output "path/to/save/image"
 ```
 
 Example: 
 
 ```shell
-$ python main.py --output="/Users/jmalik/Downloads" --text="konnichiwa" --city=Tokyo --font-size=100
+$ python src/main.py --output="/Users/jmalik/Downloads" --text="konnichiwa" --city=Tokyo --font-size=100
 
 2023-11-13 23:33:29,641 - INFO - Fetching AQI data for Tokyo
 2023-11-13 23:33:34,916 - INFO - Successfully retrieved AQI data: 21 for city: Meguro (目黒)
