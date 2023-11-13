@@ -8,6 +8,8 @@ For example:
 
 ![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/5a0db253-bbed-4185-b472-2a7f4a894101)
 
+![image](https://github.com/jatinkrmalik/aqi-visualizer/assets/7387945/47ae60fd-a12d-4671-af1c-3e29aebe2260)
+
 
 ## Features
 
